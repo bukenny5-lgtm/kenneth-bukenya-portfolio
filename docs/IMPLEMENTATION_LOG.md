@@ -12,7 +12,7 @@
 - Added linked Availability and Hama Techservices cards, distinct capability-card interactions, credential PDF indicators and route-aware footer navigation.
 
 # Stage 3 UI refinement (2026-09-27)
-- Copied the approved JPEG profile portrait to `public/assets/kenneth-bukenya-profile.jpg` without changing the original source.
+- Converted the approved AVIF/HEIF profile portrait to the cache-safe JPEG `public/assets/kenneth-bukenya-profile-2026.jpg` without changing the original source.
 - Added the portrait to the homepage hero with the required descriptive alt text and restrained crop treatment.
 - Moved How I Work into a dedicated section below the hero and refined the four homepage capability descriptions so they are distinct.
 - Added route-aware active navigation with `aria-current="page"`, including case-study routes under Projects.
