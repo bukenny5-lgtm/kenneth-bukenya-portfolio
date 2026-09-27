@@ -1,4 +1,4 @@
-const siteOrigin = typeof window === 'undefined' ? '' : window.location.origin
+const siteOrigin = import.meta.env.VITE_SITE_URL || (typeof window === 'undefined' ? '' : window.location.origin)
 
 export function setPageMetadata(title: string, description: string, path: string, image: string) {
   document.title = title
