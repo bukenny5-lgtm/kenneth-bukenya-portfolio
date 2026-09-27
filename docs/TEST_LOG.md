@@ -1,3 +1,19 @@
+# Stage 3 validation (2026-09-27)
+- `npm.cmd run lint`: PASS.
+- `npm.cmd run build`: PASS.
+- `git diff --check`: PASS; only normal Git line-ending warnings were emitted.
+- Local smoke test: HTTP 200 for all main routes, all four project routes, an invalid route, CV, certificate, profile image, MedLink screenshot and KAM diagram assets.
+- Source checks confirmed profile alt text, route-aware `aria-current`, consistent Projects labeling, focus-visible styles, no nested interactive card links, lazy media loading, keyboard gallery controls, focus trapping, focus return, scroll locking and reduced-motion rules.
+- Browser manual visual acceptance and runtime-console capture remain pending; no visual confirmation is claimed.
+
+# Stage 2 validation (2026-09-27)
+- `npm.cmd run lint`: PASS (`tsc -b --pretty false`).
+- `npm.cmd run build`: PASS; Vite production bundle generated successfully.
+- Local smoke test: HTTP 200 for `/projects`, all four `/projects/:slug` routes, an invalid project route, all included diagram/screenshot assets, and the verified MedLink live URL is linked only as an external button (not fetched during the local test).
+- Source checks confirmed reusable `CaseStudyLayout`, centralized project data, gallery keyboard handlers, Escape closing, focus return, body-scroll lock, previous/next navigation, canonical metadata and CreativeWork JSON-LD.
+- No browser automation was available for a visual runtime-console capture; interactive gallery behavior was source-verified and remains part of final QA.
+- No deployment or GitHub push performed.
+
 # Stage 1 validation (2026-09-27)
 - `npm.cmd run lint`: PASS.
 - `npm.cmd run build`: PASS; Vite production bundle generated successfully.

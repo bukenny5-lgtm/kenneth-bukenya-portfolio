@@ -1,3 +1,20 @@
+# Stage 3 UI refinement (2026-09-27)
+- Copied the approved JPEG profile portrait to `public/assets/kenneth-bukenya-profile.jpg` without changing the original source.
+- Added the portrait to the homepage hero with the required descriptive alt text and restrained crop treatment.
+- Moved How I Work into a dedicated section below the hero and refined the four homepage capability descriptions so they are distinct.
+- Added route-aware active navigation with `aria-current="page"`, including case-study routes under Projects.
+- Refined responsive hero, cards, contact options, credentials, case-study media, focus rings, hover states, spacing and reduced-motion behavior.
+- Improved the gallery focus trap so close, previous and next controls are keyboard reachable while preserving Escape, click-outside and focus-return behavior.
+- Standardized the Projects label across header, footer and page heading.
+
+# Stage 2 functional case-study implementation (2026-09-27)
+- Created a local checkpoint commit before Stage 2: `84c9fbc`.
+- Refactored the monolithic entry file into typed project data, layout, pages, routes, project cards, reusable case-study rendering, SEO utilities and a media gallery. The Error Boundary remains preserved in `src/main.tsx`.
+- Added one authoritative typed project model covering all four case studies and optional sections, features, responsibilities, media, diagrams, links, limitations and evaluation metrics.
+- Added case-study routes with previous/next navigation, Back to Projects, Discuss a similar project, verified live-link handling and private-repository notices.
+- Added a dependency-free gallery with lazy thumbnails, enlarged viewing, previous/next controls, Escape closing, click-outside closing, focus return, body-scroll locking, keyboard operation and reduced-motion styling.
+- Added reviewed public MedLink screenshots and public-safe KAM ERD diagrams. No operational KAM screenshots or identifiable analytics screenshots were copied.
+
 # Stage 1 functional completion (2026-09-27)
 - Completed the general-page and public-action pass without changing `portfolio-content`.
 - Added functional homepage actions for projects, contact and the prepared public CV; the homepage now renders all four typed projects and a credentials preview.

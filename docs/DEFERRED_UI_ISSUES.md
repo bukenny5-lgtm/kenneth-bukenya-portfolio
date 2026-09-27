@@ -1,19 +1,15 @@
-# Stage 2 / deferred UI work
+# Stage 3 / final QA remaining
 
-- Profile image placement remains intentionally deferred.
-- Active-page styling remains deferred.
-- Final spacing, typography, hover/transition and project-card alignment refinement remains deferred.
-- Detailed mobile visual review remains deferred; functional menu behavior is now implemented.
-- Final visual review of screenshots and diagrams remains deferred.
+- Manual visual acceptance is still required at 320px, 375px, 768px, 1024px, 1280px and 1440px.
+- Browser runtime-console verification and detailed keyboard/focus QA remain pending because browser automation was unavailable.
+- Final visual review of spacing, typography, gallery presentation and diagrams remains pending.
+- Deployment preparation remains out of scope for this stage.
 
-# Deferred UI issues
+# Resolved in Stage 3
 
-- Profile image is not currently displayed.
-- Navigation does not identify the active page.
-- Some sections have excessive vertical space.
-- Some capability cards repeat the same description.
-- Project-card heights and alignment require review.
-- Hover effects and transitions require final refinement.
-- Mobile layout requires detailed visual review.
-- The fourth project must be checked for visibility.
-- Screenshots and diagrams require final visual and privacy review.
+- Approved profile image is displayed in the homepage hero.
+- Active navigation is route-aware and uses `aria-current="page"` plus a visible indicator.
+- Homepage How I Work content is a dedicated section below the hero.
+- Capability descriptions are distinct and project cards have consistent aspect ratios and focus states.
+- Project label is consistently `Projects` across header, footer and page heading.
+- Gallery focus cycling, Escape closing, click-outside closing, body-scroll locking and reduced-motion behavior are implemented.

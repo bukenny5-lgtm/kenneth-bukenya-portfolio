@@ -1,2 +1,4 @@
 # Content inventory
 Source content inspected: personal information, professional bio, Hama Techservices colour and guideline files, and project-information files for KAM GRAINS ERP, MedLink VA and LeadBridgeAI. The data/analytics project assets and approved covers were inventoried. Original files were preserved. The app uses only verified summaries, statuses, technology lists, contact links and approved cover artwork.
+
+Stage 2 inventory: project data is centralized in `src/data/projects.ts`. Public case studies use the three project-information files, the preserved LeadBridgeAI evaluation figures, the named analytics assets and the preserved road-accident notebook evidence. The data/analytics package has no separate project-information file, so unsupported claims were omitted. The public media set adds two reviewed MedLink screenshots and two reviewed KAM ERD diagrams.
