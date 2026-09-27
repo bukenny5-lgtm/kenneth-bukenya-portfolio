@@ -1,3 +1,9 @@
+# Google Search Console verification preparation validation (2026-09-27)
+- Confirmed the exact verification meta tag appears once in `index.html` and once in built `dist/index.html`.
+- Confirmed existing canonical, Open Graph and theme metadata remain present; no React runtime verification code was added.
+- Google Search Console verification is prepared for `https://kenneth-bukenya-portfolio.pages.dev`; success has not been claimed.
+- Confirmed `portfolio-content` has no changes.
+
 # Production SEO and deployment-record validation (2026-09-27)
 - Confirmed application routes from `src/routes/AppRoutes.tsx` and project slugs from `src/data/projects.ts`; sitemap includes the canonical public route set and all four project case studies.
 - Confirmed `public/sitemap.xml` uses UTF-8 XML, the standard sitemap namespace, absolute HTTPS production URLs and no `lastmod` values.

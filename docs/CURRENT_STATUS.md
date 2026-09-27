@@ -1,3 +1,6 @@
+# Google Search Console HTML-tag verification prepared; external verification pending.
+The exact ownership meta tag is present in the server-delivered homepage head for `https://kenneth-bukenya-portfolio.pages.dev`. Google Search Console has not yet performed or confirmed verification.
+
 # Production deployment and SEO records complete; optional search setup remains.
 The portfolio is deployed on Cloudflare Pages at `https://kenneth-bukenya-portfolio.pages.dev` from the GitHub-connected `main` branch. Production SEO metadata, sitemap, robots policy and deployment records are complete. Optional follow-up work includes a custom domain and search-engine submission. `portfolio-content` remains unchanged by this stage.
 

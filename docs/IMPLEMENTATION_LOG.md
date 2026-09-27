@@ -1,3 +1,7 @@
+# Google Search Console verification preparation (2026-09-27)
+- Added the exact Google Search Console HTML-tag verification meta tag to the server-delivered global `index.html` head for `https://kenneth-bukenya-portfolio.pages.dev`.
+- Verification is prepared only; Google Search Console has not yet performed or confirmed verification.
+
 # Production SEO and deployment records (2026-09-27)
 - Added the production sitemap for the homepage, About, Projects, Skills, Credentials, Contact and four canonical project case-study routes.
 - Updated the public robots policy with the exact Cloudflare Pages sitemap URL.
