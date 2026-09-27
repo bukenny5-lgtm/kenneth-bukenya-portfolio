@@ -1,3 +1,14 @@
+# Production SEO and deployment-record validation (2026-09-27)
+- Confirmed application routes from `src/routes/AppRoutes.tsx` and project slugs from `src/data/projects.ts`; sitemap includes the canonical public route set and all four project case studies.
+- Confirmed `public/sitemap.xml` uses UTF-8 XML, the standard sitemap namespace, absolute HTTPS production URLs and no `lastmod` values.
+- Confirmed `public/robots.txt` permits public indexing and references the exact production sitemap URL.
+- Confirmed `public/_redirects` remains `/* /index.html 200`.
+- Confirmed `VITE_SITE_URL` drives canonical and structured-data absolute origins; no application-generated localhost or placeholder origins appear in production output. A React Router dependency retains its internal fallback literal `http://localhost`, which is not used as the configured site origin.
+- Confirmed `dist/sitemap.xml`, `dist/robots.txt`, `dist/_redirects` and existing public assets are present after build.
+- `npm.cmd run lint`: PASS.
+- `npm.cmd run build`: PASS.
+- `git diff --check`: PASS.
+
 # Pre-hosting interface correction validation (2026-09-27)
 - `npm.cmd run lint`: PASS.
 - `npm.cmd run build`: PASS.

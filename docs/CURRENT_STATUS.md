@@ -1,5 +1,5 @@
-# Pre-hosting interface corrections complete; deployment preparation pending.
-The approved Hama Techservices footer brand block, clickable contact rows, footer navigation states and responsive interaction treatments are implemented and validated with lint, build, diff and local route smoke checks. `portfolio-content` remains unchanged. No deployment or push was performed.
+# Production deployment and SEO records complete; optional search setup remains.
+The portfolio is deployed on Cloudflare Pages at `https://kenneth-bukenya-portfolio.pages.dev` from the GitHub-connected `main` branch. Production SEO metadata, sitemap, robots policy and deployment records are complete. Optional follow-up work includes a custom domain and search-engine submission. `portfolio-content` remains unchanged by this stage.
 
 # Stage 1 functional completion: complete for general pages and public actions. Homepage, About, Projects, Skills, Credentials, Contact and 404 flows are implemented; CV and public certificate downloads are wired. The portfolio is not marked fully functionally complete.
 

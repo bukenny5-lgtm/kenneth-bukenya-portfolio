@@ -1,3 +1,9 @@
+# Production SEO and deployment records (2026-09-27)
+- Added the production sitemap for the homepage, About, Projects, Skills, Credentials, Contact and four canonical project case-study routes.
+- Updated the public robots policy with the exact Cloudflare Pages sitemap URL.
+- Recorded the successful GitHub-connected Cloudflare Pages deployment, production branch `main`, Vite build settings and `VITE_SITE_URL` configuration.
+- Preserved existing metadata and verified content; canonical and structured-data origins now use the configured production URL.
+
 # Pre-hosting brand and contact correction (2026-09-27)
 - Added the approved dark-background Hama Techservices logo under `public/branding`; the original source remains unchanged.
 - Replaced the footer eyebrow treatment with a readable secondary-brand block and Skills CTA.

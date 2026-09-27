@@ -1,6 +1,6 @@
 # Deployment guide
 
-The app is prepared for a static Cloudflare Pages deployment. No deployment or external service connection has been performed.
+The app is deployed as a static Cloudflare Pages site through the GitHub-connected production workflow.
 
 | Setting | Value |
 |---|---|
@@ -13,4 +13,4 @@ The app is prepared for a static Cloudflare Pages deployment. No deployment or e
 
 `VITE_SITE_URL` should contain the final public origin, including the scheme and without a trailing path. The app falls back to the browser origin when it is not set.
 
-The static robots policy is included. A production sitemap still requires the final public origin before it can be added without inventing a URL.
+The static robots policy and production sitemap are included. Optional follow-up work includes connecting a custom domain and submitting the sitemap to search engines.
