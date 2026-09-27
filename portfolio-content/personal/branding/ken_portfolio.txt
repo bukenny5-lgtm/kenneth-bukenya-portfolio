@@ -1,0 +1,2 @@
+cd C:\WebProjects\KennethPortfolio
+npm.cmd run dev

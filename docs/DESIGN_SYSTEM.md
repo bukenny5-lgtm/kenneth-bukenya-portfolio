@@ -1,0 +1,2 @@
+# Design system
+Brand colours follow the supplied Hama Techservices guidance: navy #123B5D, dark navy #0B2438, teal #00A6A6, light blue-grey #EAF2F6, primary text #17212B and secondary text #52606D. The interface uses high-contrast navy headings, teal actions, semantic sections, visible focus-compatible native controls, responsive grids and restrained depth. The design avoids busy gradients, glassmorphism and unsupported claims.

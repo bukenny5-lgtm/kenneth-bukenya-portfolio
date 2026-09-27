@@ -1,0 +1,22 @@
+%% Verified controls: PO status refresh, receipt posting, AP posting/payment journals and reconciliation.
+flowchart TB
+  classDef doc fill:#DCEAF4,stroke:#123B5D,color:#17212B
+  classDef post fill:#E4F2EC,stroke:#16805B,color:#17212B
+  classDef gate fill:#FFF3D6,stroke:#B7791F,color:#17212B
+  classDef trace fill:#FBE4E1,stroke:#B42318,color:#17212B
+  SUP[Supplier]:::doc --> PO[Purchase Order]:::doc
+  PO --> STATUS{Approval / PO status control}:::gate
+  STATUS -->|approved / receivable| GRN[Goods Received Note]:::doc
+  STATUS -->|not receivable| HOLD[Held for correction or approval]:::gate
+  GRN --> RECEIPT[Purchase receipt / stock movement]:::post
+  RECEIPT --> LOT[Inventory lot + stock-on-hand update]:::post
+  GRN --> APINV[AP invoice]:::doc
+  APINV --> APPOST{Validated and posted?}:::gate
+  APPOST -->|yes| APPAY[AP payment]:::doc
+  APPOST -->|no| APHOLD[Unposted invoice]:::gate
+  APPAY --> ACCOUNT[Payment account]:::post --> J[Financial journal]:::post --> RECON[Reconciliation]:::post
+  LOT --> REPORT[Procurement / inventory reporting]:::trace
+  J --> REPORT
+  PO -. partial receipts reflected in PO status totals .-> AUD[Audit trail]:::trace
+  GRN -. receipt and posting history .-> AUD
+  APPAY -. payment and reversal history .-> AUD

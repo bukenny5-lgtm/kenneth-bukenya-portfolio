@@ -1,0 +1,101 @@
+PROJECT NAME
+LeadBridgeAI
+
+PROJECT CATEGORY
+AI-Assisted Lead Engagement and Evaluation Prototype
+
+PROJECT STATUS
+Hackathon prototype and evaluation baseline. The repository contains a deterministic baseline, verified-tool workflow, deterministic policy boundary, synthetic demo hub and evaluation evidence. It is not production-deployed.
+
+DEVELOPMENT PERIOD
+August 2026
+
+CHALLENGE OR EVENT
+Frontier Engineering Challenge 2026
+
+MY ROLE
+Software Developer and AI-Assisted Systems Engineer
+
+PROJECT OVERVIEW
+LeadBridgeAI is an AI-assisted lead-engagement prototype for small and medium-sized online sellers. It explores how incoming customer questions can be organized, checked against synthetic business evidence, classified by intent, routed for escalation and turned into a response draft without giving an automated system unrestricted authority to speak for the business. The implemented repository is deliberately synthetic and auditable: a deterministic baseline provides a reproducible comparison point, a verified read-only tool layer supplies product, inventory, delivery and policy context, and a deterministic policy boundary controls protected operational decisions. A small local demo hub presents synthetic messages, evidence and evaluation summaries. Every customer-facing response remains inside a mandatory human-approval boundary. The project's main engineering contribution is the separation of proposal, verification, policy enforcement and approval, supported by anti-leakage controls, structured traces and a strict case-level evaluator. Stored reports show that verified context improves the evaluated workflow over the frozen baseline, while also making clear that the 20-case set is not production validation.
+
+PROBLEM
+Small sellers need consistent answers to product, price, availability, delivery and order questions arriving through different channels. Unverified automation can invent facts, over-promise, mishandle discounts or send an inappropriate response.
+
+PROPOSED SOLUTION
+A synthetic workflow normalizes inquiry inputs, assesses intent and buying opportunity, checks controlled business evidence, applies factual and policy constraints, decides whether escalation is needed, and prepares a response for human review.
+
+TARGET USERS
+Small and medium-sized online sellers, operators reviewing inbound inquiries, and technical teams evaluating responsible AI-assisted customer communication.
+
+IMPLEMENTED BASELINE
+The repository includes a deterministic basic sales-inquiry baseline, a strict scorer, 20 synthetic cases, JSON and Markdown reports, a verified read-only tool layer over synthetic fixtures, a deterministic policy boundary and a local synthetic demo hub.
+
+PLANNED PRODUCT CAPABILITIES
+Live channel connectors, authentication, persistence, deployment infrastructure and production-grade integrations are planned or future work only. The repository does not connect to live Facebook, Instagram, TikTok or email accounts.
+
+INPUTS
+Synthetic channel, conversation messages, post ID and business description. Tool-assisted runs may access controlled synthetic product, inventory, delivery and policy fixtures through verified tools.
+
+PROCESSING WORKFLOW
+Incoming message -> input normalization -> intent assessment -> buying-opportunity assessment -> policy and factual checks -> escalation decision -> proposed response -> mandatory human review -> approve, revise or reject.
+
+HUMAN-APPROVAL MODEL
+Every customer-facing response requires human approval before it is sent. Escalation is separate from approval and routes ambiguous, unsupported, low-confidence or consequential cases to specialized human review.
+
+EVALUATION METHODOLOGY
+The same 20 synthetic cases and strict all-applicable-requirements scorer are used for comparison. Runtime-safe transformation removes authoring-only fields and protects against leakage of expected answers, rationales, prohibited actions and hidden business constraints.
+
+EVALUATION RESULTS
+Authoritative frozen deterministic baseline: 20.00% correctly handled cases (4/20), 60.00% intent accuracy, 60.00% escalation accuracy, 100.00% factual integrity, 100.00% policy safety and 52 ms runtime. Verified-tool comparison: 60.00% correctly handled cases (12/20), 80.00% intent accuracy, 80.00% escalation accuracy, 100.00% factual integrity, 100.00% policy safety and 39 ms runtime. These are stored synthetic report values, not production accuracy.
+
+RESPONSIBLE AI AND GOVERNANCE
+The design uses structured inputs, authoring-field removal, anti-leakage protection, factual and policy constraints, escalation, trace logging, evaluation evidence and universal human approval. No autonomous negotiation, sales closing or unreviewed customer messaging is claimed.
+
+TECHNOLOGY STACK
+TypeScript, Node.js, structured JSON evaluation cases, deterministic baseline logic, verified synthetic fixtures, automated tests, Git and GitHub-oriented documentation.
+
+REPOSITORY AND DOCUMENTATION
+The LeadBridgeAI repository contains the implementation, evaluation cases, reports, trace guidance, architecture notes, decision log and reproduction materials. The source repository is private unless separately made available by its owner.
+
+MY RESPONSIBILITIES
+Defined the workflow boundary, implemented or maintained the deterministic evaluation foundation, documented engineering decisions, preserved synthetic-data constraints, recorded evaluation evidence, and prepared the portfolio documentation package.
+
+IMPORTANT ENGINEERING DECISIONS
+Use synthetic cases; keep the baseline reproducible without an API key; separate verification from response generation; add verified tools before model-driven orchestration; enforce a deterministic policy boundary; and require human approval for every customer-facing response.
+
+CHALLENGES IDENTIFIED
+Product association and nuanced multi-intent classification remain difficult in the frozen baseline. Escalation and order-field handling also need improvement. The project must communicate useful engineering evidence without overstating a small synthetic evaluation or implying live platform capability.
+
+LESSONS LEARNED
+Evaluation design and input boundaries matter as much as response generation. Verified context can improve handling, but policy enforcement and human review remain necessary. Stored results should be reported with their scope and limitations.
+
+FUTURE IMPROVEMENTS
+Expand representative synthetic cases; improve product association, multi-intent reasoning and escalation; validate bounded model-assisted workflows; add authentication, persistence and deployment only after the safety and evaluation boundaries are preserved; and introduce live integrations only with appropriate permissions and controls.
+
+PORTFOLIO SUMMARY
+A synthetic, evaluation-first lead-engagement workflow that combines verified business context, deterministic policy controls and mandatory human approval.
+
+SHORT PROJECT DESCRIPTION
+LeadBridgeAI is a synthetic lead-engagement prototype for small sellers. It classifies inquiries, checks controlled business evidence, evaluates buying opportunities, escalates risky cases and prepares response drafts behind mandatory human approval. The project emphasizes reproducible evaluation, anti-leakage controls, traceability and responsible AI-assisted communication.
+
+TECHNOLOGIES FOR DISPLAY
+TypeScript · Node.js · JSON · automated tests · deterministic workflow logic · Git
+
+GITHUB AND SOURCE-CODE AVAILABILITY
+The source repository is private. Code access is not assumed from this portfolio package.
+
+LIVE DEMONSTRATION
+A local synthetic technical demonstration is available on request, subject to the project owner's sharing decision. No public production demo or live channel integration is claimed.
+
+SCREENSHOT CAPTIONS
+Approved project cover image for LeadBridgeAI. The image is presented as portfolio cover artwork; no additional interface behavior is inferred from it.
+
+DIAGRAM CAPTIONS
+01 - System architecture separating implemented baseline processing, evaluated behavior, planned integrations and the human-approval boundary.
+02 - Lead-processing workflow showing that every customer-facing response passes through mandatory human review.
+03 - Evaluation framework connecting synthetic cases, anti-leakage controls, strict scoring, evidence outputs and improvement feedback.
+04 - Responsible AI and governance controls linking structured inputs, factual and policy constraints, escalation, traces and human approval.
+
+PARTICIPATION CERTIFICATE
+A participation certificate is associated with the Frontier Engineering Challenge 2026 project materials. It is referenced as participation evidence, not as an award or winning certificate.

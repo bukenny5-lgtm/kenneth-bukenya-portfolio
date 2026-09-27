@@ -1,0 +1,31 @@
+%% Verified architecture from frontend/src, backend/src, database/migrations and docs.
+flowchart TB
+  classDef actor fill:#E7F3F4,stroke:#00A6A6,color:#17212B
+  classDef app fill:#DCEAF4,stroke:#123B5D,color:#17212B
+  classDef data fill:#E4F2EC,stroke:#16805B,color:#17212B
+  classDef control fill:#FFF3D6,stroke:#B7791F,color:#17212B
+  classDef audit fill:#FBE4E1,stroke:#B42318,color:#17212B
+  U[Business users]:::actor --> B[Browser / client]
+  A[Administrators]:::actor --> B
+  B --> R[React + TypeScript]
+  R --> V[Vite]
+  R --> Q[TanStack Query]
+  R --> X[Axios HTTP client]
+  R --> G[React Router + protected routes]
+  R --> E[Excel file export]
+  X --> API[Express REST API]
+  API --> AUTH[JWT authentication]
+  AUTH --> RBAC[Role / permission middleware]
+  RBAC --> ROUTES[Node.js domain routes and services]
+  ROUTES --> PG[PostgreSQL]
+  PG --> APP[app: company, branches, locations, payments]
+  PG --> SEC[sec: users, roles, access]
+  PG --> PUR[pur: purchasing and AP]
+  PG --> INV[inv: lots, stock and movements]
+  PG --> SAL[sal: sales, AR and returns]
+  PG --> FIN[fin: journals and accounts]
+  PG --> AUD[audit: audit events]
+  ROUTES --> REP[Reporting and dashboard endpoints]
+  REP --> E
+  ROUTES --> AUDIT[Audit logging and posting history]:::audit
+  ROUTES -. feature-gated foundation .-> EFRIS[EFRIS queue / mappings; URA transport not configured]:::control

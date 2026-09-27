@@ -1,0 +1,2 @@
+# Privacy review
+No personal-information.txt, CV PDF, certificates, screenshots containing operational records, notebooks, reports, source Mermaid files, customer identities, credentials or private repository paths are exposed by the app. KAM GRAINS ERP is labelled proprietary and operational. LeadBridgeAI is labelled synthetic and evaluation-only. The Frontier Engineering Challenge certificate is described as participation evidence, not an award. Further screenshot review is recommended before adding additional imagery.

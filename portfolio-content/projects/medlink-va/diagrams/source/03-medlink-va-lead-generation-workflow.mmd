@@ -1,0 +1,15 @@
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#F7FAFC","primaryTextColor":"#17212B","primaryBorderColor":"#123B5D","lineColor":"#00A6A6","fontFamily":"Arial"}}}%%
+flowchart TD
+  V[Website visitor] --> P[Service, class, job or contact page]
+  P --> CTA[Call to action]
+  CTA --> FORM[Contact, consultation or newsletter form]
+  FORM --> FV[Browser and server validation]
+  FV -->|invalid| ERR[Inline error or generic failure]
+  FV -->|valid| FN[Cloudflare Pages Function]
+  FN --> SAFE[Normalize and validate payload]
+  SAFE --> BREVO[Brevo contacts or transactional email]
+  BREVO --> NOTIFY[MedLink VA notification]
+  BREVO --> CONF[Success response or confirmation]
+  NOTIFY --> FU[Contact follow-up]
+  CONF --> UI[Success confirmation in browser]
+  FN -->|provider or network failure| FAIL[Generic error response]

@@ -1,0 +1,23 @@
+flowchart TB
+  classDef input fill:#E6F4F1,stroke:#00A6A6,color:#17212B,stroke-width:2px
+  classDef control fill:#FFF7E6,stroke:#B7791F,color:#17212B,stroke-width:2px
+  classDef measure fill:#EAF2F8,stroke:#123B5D,color:#17212B,stroke-width:2px
+  classDef output fill:#EAF7EF,stroke:#16805B,color:#17212B,stroke-width:2px
+  A[Authored synthetic evaluation cases]:::input --> B[Runtime-safe input transformation]:::control --> C[Anti-leakage controls]:::control --> D[Baseline or verified-tool execution]:::measure
+  E[Expected labels]:::input --> H[Strict case scorer]:::measure
+  D --> F[Actual predictions]:::measure --> H
+  H --> I[Intent evaluation]:::measure
+  H --> J[Buying-opportunity evaluation]:::measure
+  H --> K[Escalation evaluation]:::measure
+  H --> L[Factual-compliance checks]:::measure
+  H --> M[Policy-compliance checks]:::measure
+  D --> N[Runtime measurement]:::measure
+  I --> O[JSON results]:::output
+  J --> O
+  K --> O
+  L --> O
+  M --> O
+  N --> P[Markdown results]:::output
+  O --> Q[Improvement feedback loop]:::output
+  P --> Q
+  linkStyle default stroke:#123B5D,stroke-width:1.5px

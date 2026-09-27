@@ -1,0 +1,204 @@
+PROJECT NAME
+KAM GRAINS ERP
+
+PROJECT CATEGORY
+Integrated Enterprise Resource Planning and Business Management System
+
+PROJECT STATUS
+Active development and operational implementation. The system is the operational ERP reference for KAM GRAINS while continuing to evolve toward a broader configurable ERP and POS platform. Some newer capabilities remain development-only, feature-gated, or subject to authenticated UI acceptance before production approval.
+
+DEVELOPMENT PERIOD
+October 2024–Present
+
+CLIENT OR BUSINESS CONTEXT
+KAM GRAINS is a grain trading business whose operations span purchasing, goods receiving, inventory, processing, sales, deliveries, customer accounts, supplier accounts, payments, finance and management reporting. The ERP brings these activities into one controlled operational system with shared master data, stock traceability, accounting links and audit history.
+
+MY ROLE
+Full-Stack Developer and Business Systems Engineer
+
+PROJECT OVERVIEW
+KAM GRAINS ERP is a full-stack business management system built for a grain trading operation. It integrates procurement, goods receiving, lot-based inventory, cleaning and reclassification, sales orders, deliveries, Quick Sale, customer returns, accounts receivable, accounts payable, payment accounts, till operations, finance, reporting and audit controls.
+
+The system connects browser workflows to a REST API and PostgreSQL business schemas. Operational documents can create controlled stock movements and financial journal entries, allowing users to follow a transaction from its source document through inventory, receivables or payables, payment and reporting. Delivery is treated as the primary sales-reporting event, while customer returns preserve traceable inventory and financial reversals.
+
+The implementation also includes role- and permission-aware navigation, branch/location context, backdated transaction controls, Excel exports, weekly reporting, customer analytics and development foundations for EFRIS compliance and till-session management. The project is actively developed and operationally implemented; features that are not production-approved are identified as such rather than presented as finished integrations.
+
+BUSINESS CHALLENGE
+Previously disconnected operational activities made it difficult to maintain one reliable view of purchasing, stock, sales, customer balances, supplier balances and financial postings. The business needed a system that reflected real grain-trading workflows, including lot-level stock, goods received against purchasing, cleaning outputs, delivery-based sales recognition, payment controls and auditability.
+
+The system also needed to support controlled corrections and backdated transactions without losing the original document or posting history. Reporting had to use business transaction dates and consistent weekly periods, while customer analysis needed to cover performance, dormancy and RFM-style segmentation.
+
+SOLUTION
+A modular React and Node.js ERP was implemented over a PostgreSQL database with domain-specific schemas and SQL posting functions. The frontend exposes permission-gated operational pages and reporting views. The backend provides REST routes, authentication middleware, location/branch access controls, workflow services and database-backed posting boundaries.
+
+Core business events are represented explicitly: purchase receipts create inventory records, deliveries create SALE_ISSUE movements, customer returns create return movements and related financial adjustments, and financial transactions create controlled journal entries. Reporting views combine operational events using verified business rules, and audit records preserve transaction and backdate traceability.
+
+PRIMARY USERS
+- Business owners and managers
+- Administrators and system configurators
+- Purchasing staff
+- Inventory and warehouse staff
+- Sales and dispatch staff
+- Finance and accounts receivable/payable staff
+- Till operators and cashiers
+- Auditors and read-only management users
+- Head-office or branch-level users where branch controls apply
+
+CORE MODULES
+- Procurement and purchasing
+- Purchase orders and goods received notes
+- Inventory, product lots and stock movements
+- Cleaning batches and product reclassification
+- Internal stock requests and inter-site transfers
+- Sales orders, Quick Sale and deliveries
+- Customer returns and return/refund controls
+- Accounts receivable and customer receipts
+- Accounts payable and supplier payments
+- Expense vouchers and payment accounts
+- Till Management and payment channels
+- Reconciliation and financial journals
+- Finance, stock counts and stock adjustments
+- Management reports and inventory reports
+- User, role and permission management
+- Audit logging
+- EFRIS compliance foundations
+
+KEY FEATURES
+- Purchase orders with status and receipt progress controls
+- Goods received note workflows linked to inventory receipts
+- Product-lot tracking and stock-on-hand visibility
+- Movement headers and lines for inventory traceability
+- Cleaning batches that consume source stock and produce classified output stock
+- Internal replenishment requests and inter-site transfer states
+- Sales orders followed by controlled delivery posting
+- Quick Sale/POS foundation with server-controlled prices, payment methods and posting boundaries
+- Till-session foundation for controlled cashier and cash handling
+- Customer returns with RESTOCK/DAMAGED handling, return movements and financial settlement foundations
+- AR invoicing, receipts and customer balance tracking
+- AP invoicing, partial supplier payments and supplier balance tracking
+- Payment accounts, payment-channel controls and reconciliation
+- Journals with balanced posting and reversal references
+- Stock counts, adjustments and inventory reporting
+- Excel export support for operational reports
+- Role-based access, location/branch scoping and audit history
+- Backdated transaction reasons, approval fields and audit events
+- Feature flags and business-profile configuration
+
+BUSINESS WORKFLOWS
+Procure-to-pay follows supplier, purchase order, status/approval control, goods received note, purchase receipt and lot/stock update, AP invoice, AP payment, payment account, journal, reconciliation, reporting and audit.
+
+Order-to-cash follows customer, sales order, delivery, SALE_ISSUE inventory posting, lot/cost determination, financial posting, AR invoice, customer receipt, payment account or till, reconciliation and management reporting. Quick Sale provides a direct POS branch, including inventory and payment/till integration. Customer returns create traceable inventory and financial reversal or settlement effects according to their source, disposition and posting state.
+
+Inventory movement workflows cover purchase receipts, product-lot creation, stock-on-hand changes, cleaning/reclassification, internal requests, inter-site transfer dispatch and receipt, delivery issue, Quick Sale issue, customer return, stock count, stock adjustment, the movement ledger, audit history and inventory reporting.
+
+TECHNOLOGY STACK
+React, TypeScript, Vite, Node.js, Express.js, PostgreSQL, SQL, REST APIs, TanStack Query, Axios, Tailwind CSS, shadcn/ui, Git and GitHub.
+
+The frontend also uses React Router, React Hook Form, Zod, Recharts and Lucide React where verified in the project dependencies and source.
+
+DATABASE ARCHITECTURE
+The PostgreSQL design separates business concerns into verified schemas:
+
+- app — company, branch, location, payment and operational configuration
+- sec — users, roles, permissions and access mappings
+- pur — procurement, goods receipts, supplier invoices and payments
+- inv — products, lots, stock balances, movement headers and movement lines
+- sal — sales orders, deliveries, POS sales, AR, returns and sales events
+- fin — chart of accounts, journals and journal lines
+- audit — audit records, including backdated transaction events
+- reporting — reporting views and analytics, including unified sales-event reporting
+
+SQL functions, triggers and migrations enforce or support posting, balance checks, branch attribution, return settlement, backdate logging, inventory movement creation and reporting logic.
+
+SECURITY AND CONTROL FEATURES
+- JWT-based authentication through the Express API
+- Role-based and action-based permission middleware
+- Protected frontend routes and permission-aware navigation
+- User and role administration
+- Branch/location access controls where implemented
+- Posted/unposted transaction controls
+- Backdate flags, reasons, approval fields and audit events
+- Journal balance assertions and controlled reversal references
+- Idempotency and duplicate-posting protections in selected workflows
+- Sensitive values excluded from portfolio documentation
+
+REPORTING AND ANALYTICS
+Reporting uses transaction_date and treats delivery as the primary sales business event rather than the sales order. Weekly operational reports use Monday-to-Sunday periods. Verified reporting areas include management summaries, sales by product, purchases by product, profit by product, customer weekly performance, dormant customers, customer concentration and RFM-related customer analysis. Inventory reports expose stock and movement information, while Excel export support provides operational file outputs.
+
+MY RESPONSIBILITIES
+- Designed and implemented frontend pages, navigation and protected workflows
+- Built REST API routes, middleware and domain services
+- Modelled PostgreSQL schemas, migrations, functions, triggers and reporting views
+- Implemented inventory, procurement, sales, AR, AP and finance posting flows
+- Connected business documents to stock movements and journals
+- Implemented permission, branch/location and audit controls
+- Built reporting and Excel export capabilities
+- Investigated defects through source inspection, SQL validation and targeted tests
+- Maintained development documentation and staged feature validation
+
+IMPORTANT TECHNICAL DECISIONS
+- Use delivery as the sales-reporting event while retaining sales orders as pre-delivery documents.
+- Represent stock changes with movement headers and lines rather than opaque balance-only updates.
+- Preserve product lots and source movement costs to support traceability and FIFO-related cost determination.
+- Keep financial posting in controlled SQL/database boundaries with balanced journal assertions.
+- Use feature flags and business profiles for capabilities that are not universally enabled.
+- Keep EFRIS as a separate, readiness-gated compliance foundation rather than inventing an unverified URA transport.
+- Preserve original documents and create reversal or settlement records instead of destructive edits.
+- Use Monday-to-Sunday reporting periods and transaction dates to match business operations.
+
+CHALLENGES SOLVED
+- Integrated purchasing, inventory, sales, finance and reporting workflows that had previously been disconnected.
+- Added lot-level stock traceability across receipts, processing, delivery and returns.
+- Connected operational events to financial journals while retaining reversal and audit references.
+- Added controlled handling for backdated transactions and supporting reasons.
+- Built customer return flows that account for inventory, AR credit/refund due and journal effects.
+- Added branch/location foundations and access-aware operational context.
+- Corrected reporting and SQL edge cases around sales events, dormant status, AR summaries and return settlement.
+
+RESULTS AND BUSINESS VALUE
+The system provides one operational source of truth for purchasing, inventory, sales, receivables, payables, payments, finance and reporting. Users can trace a business document through stock and accounting effects, review audit history, work with lot-level inventory and produce consistent weekly and customer-focused reports.
+
+The repository and project documentation verify active operational use and continued development, but do not establish quantified savings, percentage improvements or performance benchmarks. Those claims are intentionally excluded.
+
+PORTFOLIO SUMMARY
+KAM GRAINS ERP is an integrated ERP implementation that connects procurement, lot-based inventory, sales, payments, finance and reporting for a grain trading business. It demonstrates full-stack engineering combined with business-process modelling, database posting controls, auditability and staged delivery of operational features.
+
+SHORT PROJECT DESCRIPTION
+KAM GRAINS ERP is a full-stack business management system for grain trading operations. It integrates purchasing, lot-based inventory, sales, deliveries, customer and supplier accounts, payments, finance, reporting and audit controls through a React, Node.js, Express and PostgreSQL architecture, giving teams one traceable operational workflow.
+
+TECHNOLOGIES FOR DISPLAY
+React · TypeScript · Vite · Node.js · Express.js · PostgreSQL · SQL · REST APIs · TanStack Query · Axios · Tailwind CSS · shadcn/ui · Git · GitHub
+
+GITHUB AND SOURCE-CODE AVAILABILITY
+The source repository is private proprietary software. Public source-code access is not claimed. Technical demonstrations, implementation walkthroughs and selected portfolio materials are available on request.
+
+LIVE DEMONSTRATION
+No public live URL is claimed. Technical demonstrations can be arranged on request using an appropriate development or controlled demonstration environment.
+
+SCREENSHOT CAPTIONS
+- 01-management-dashboard.png — Management dashboard with operational summaries and business KPIs.
+- 02-inventory-stock-on-hand.png — Stock-on-hand view for product, lot and location visibility.
+- 03-purchase-order-management.png — Purchase order management and procurement tracking.
+- 04-goods-received-note.png — Goods received note workflow for recording supplier receipts.
+- 06-sales-order-management.png — Sales order capture before delivery and sales reporting.
+- 08-till-management.png — Till and cashier-session management controls.
+- 10-customer-returns.png — Customer return workflow with source, disposition and settlement context.
+- 11-accounts-receivable.png — Accounts receivable invoices, balances and customer receipts.
+- 12-accounts-payable.png — Accounts payable invoices, supplier payments and balances.
+- 14-finance-and-journals.png — Finance and journal review with controlled posting traceability.
+- 15-management-reporting.png — Management reporting and operational analysis.
+- 16-system-audit-log.png — Audit log for user actions and transaction traceability.
+
+DIAGRAM CAPTIONS
+- 01-kam-grains-system-architecture.mmd / .svg / .png — Verified browser, API, database and reporting architecture.
+- 02-kam-grains-erp-module-relationship.mmd / .svg / .png — Relationship between procurement, inventory, sales, finance, reporting and control modules.
+- 03-kam-grains-procure-to-pay-workflow.mmd / .svg / .png — Supplier purchasing through receipt, AP settlement, reconciliation and audit.
+- 04-kam-grains-order-to-cash-workflow.mmd / .svg / .png — Customer order through delivery, SALE_ISSUE, invoicing, payment, returns and reporting.
+- 05-kam-grains-inventory-movement-workflow.mmd / .svg / .png — Inventory events from receipt and processing through transfers, issues, returns, counts and audit.
+- 06a-procurement-and-accounts-payable-erd.png.png — Technical procurement and accounts-payable relationship view.
+- 06b-product-lot-and-stock-movement-erd.png.png — Technical product, lot and stock-movement relationship view.
+- 06c-stock-control-transfer-and-adjustment-erd.png.png — Technical stock-control, transfer and adjustment relationship view.
+- 06d-general-ledger-and-expenses-erd-technical.png.png — Technical general-ledger and expense relationship view.
+- 06e-payment-and-reconciliation-erd-technical.png.png — Technical payment-account and reconciliation relationship view.
+
+

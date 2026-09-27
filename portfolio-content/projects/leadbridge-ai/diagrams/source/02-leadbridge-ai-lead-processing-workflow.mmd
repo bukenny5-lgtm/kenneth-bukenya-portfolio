@@ -1,0 +1,11 @@
+flowchart TB
+  classDef step fill:#E6F4F1,stroke:#00A6A6,color:#17212B,stroke-width:2px
+  classDef decision fill:#FFF7E6,stroke:#B7791F,color:#17212B,stroke-width:2px
+  classDef boundary fill:#FDECEC,stroke:#B42318,color:#17212B,stroke-width:3px
+  classDef outcome fill:#EAF7EF,stroke:#16805B,color:#17212B,stroke-width:2px
+  A[Incoming message]:::step --> B[Input normalization]:::step --> C[Intent assessment]:::step --> D[Buying-opportunity assessment]:::step --> E[Policy and factual checks]:::step --> F{Escalation decision}:::decision --> G[Proposed response]:::step --> H[Mandatory human review]:::boundary --> I{Approve, revise or reject}:::decision
+  I -->|Approve| J[Customer-facing response]:::outcome
+  I -->|Revise| G
+  I -->|Reject| K[No customer-facing response]:::outcome
+  X[Catalogue, pricing, stock, location and policy context only when verified or explicitly planned]:::decision -. context .-> E
+  linkStyle default stroke:#123B5D,stroke-width:1.5px

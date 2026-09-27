@@ -1,0 +1,24 @@
+%% Verified modules only: frontend pages/routes, backend routes, migrations and docs.
+flowchart TB
+  classDef mod fill:#F7FAFC,stroke:#00A6A6,color:#17212B
+  classDef post fill:#E4F2EC,stroke:#16805B,color:#17212B
+  classDef warn fill:#FFF3D6,stroke:#B7791F,color:#17212B
+  PO[Purchasing / Purchase Orders]:::mod --> GRN[GRN / Goods Receipts]:::mod
+  GRN --> INV[Inventory, lots, stock movements]:::mod
+  INV --> CL[Cleaning Batches]:::mod
+  INV --> ISR[Internal Stock Requests]:::mod --> TR[Inter-Site Transfers]:::mod
+  INV --> SC[Stock Counts]:::mod --> SA[Stock Adjustments]:::mod
+  SO[Sales Orders]:::mod --> DEL[Deliveries]:::mod
+  QS[Quick Sale]:::mod --> DEL
+  DEL --> RET[Customer Returns]:::mod
+  DEL --> ARI[AR Invoices]:::mod --> REC[Receipts / AR Payments]:::mod
+  GRN --> API[AP Invoices]:::mod --> APP[AP Payments]:::mod
+  EXP[Expense Vouchers]:::mod --> API
+  REC --> PA[Payment Accounts]:::mod
+  APP --> PA
+  APC[API Payment Channels]:::mod --> PA
+  TILL[Till Management]:::mod --> PA
+  PA --> J[Finance / Journals]:::post --> REPORT[Reports and analytics]:::post
+  PA --> RECON[Reconciliation]:::post
+  USERS[Users and Roles]:::mod --> AUD[Audit Log]:::post
+  EFRIS[EFRIS Compliance]:::warn -. queued fiscal records .-> QS

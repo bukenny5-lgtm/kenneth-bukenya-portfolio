@@ -1,0 +1,2 @@
+# Content inventory
+Source content inspected: personal information, professional bio, Hama Techservices colour and guideline files, and project-information files for KAM GRAINS ERP, MedLink VA and LeadBridgeAI. The data/analytics project assets and approved covers were inventoried. Original files were preserved. The app uses only verified summaries, statuses, technology lists, contact links and approved cover artwork.

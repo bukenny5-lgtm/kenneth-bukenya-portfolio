@@ -1,0 +1,10 @@
+flowchart TB
+  classDef safeguard fill:#E6F4F1,stroke:#00A6A6,color:#17212B,stroke-width:2px
+  classDef evidence fill:#EAF2F8,stroke:#123B5D,color:#17212B,stroke-width:2px
+  classDef boundary fill:#FDECEC,stroke:#B42318,color:#17212B,stroke-width:3px
+  classDef outcome fill:#EAF7EF,stroke:#16805B,color:#17212B,stroke-width:2px
+  A[Structured inputs]:::safeguard --> B[Authoring-field removal]:::safeguard --> C[Anti-leakage protection]:::safeguard --> D[Factual constraints]:::safeguard --> E[Policy constraints]:::safeguard --> F[Escalation]:::safeguard --> G[Universal human approval]:::boundary --> H[Controlled customer communication]:::outcome
+  C --> I[Trace logging]:::evidence --> J[Evaluation evidence]:::evidence
+  J -. informs .-> D
+  J -. informs .-> E
+  linkStyle default stroke:#123B5D,stroke-width:1.5px

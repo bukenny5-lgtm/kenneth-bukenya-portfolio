@@ -1,0 +1,16 @@
+%% Delivery is the verified sales-reporting business event; sales orders are pre-delivery documents.
+flowchart TB
+  classDef doc fill:#DCEAF4,stroke:#123B5D,color:#17212B
+  classDef post fill:#E4F2EC,stroke:#16805B,color:#17212B
+  classDef gate fill:#FFF3D6,stroke:#B7791F,color:#17212B
+  classDef trace fill:#FBE4E1,stroke:#B42318,color:#17212B
+  C[Customer]:::doc --> SO[Sales order]:::doc --> DEL[Delivery]:::doc
+  DEL --> ISSUE[Inventory SALE_ISSUE]:::post --> COST[FIFO / verified lot-cost allocation]:::post --> POST[Financial posting]:::post
+  POST --> ARI[AR invoice]:::doc --> RECEIPT[Customer receipt]:::doc --> PAY[Payment account or till]:::post --> RECON[Reconciliation]:::post --> MR[Management reporting]:::trace
+  DEL --> MR
+  QS[Quick Sale]:::doc --> QPOST[POS inventory + financial posting]:::post --> QPAY[POS payment / till]:::post --> MR
+  DEL --> RETURN{Customer return?}:::gate
+  RETURN -->|yes| RET[Customer return]:::doc --> REV[Inventory reversal + return journal]:::post --> CREDIT[AR credit / refund due settlement]:::post --> RECON
+  ISSUE -. movement trace .-> AUD[Audit log]:::trace
+  POST -. journal trace .-> AUD
+  REV -. return trace .-> AUD

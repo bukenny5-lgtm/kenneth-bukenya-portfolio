@@ -1,0 +1,2 @@
+# Portfolio architecture
+The site is a Vite + React + TypeScript single-page application with React Router routes for Home, About, Selected Work, project case studies, Credentials, Contact and a 404 page. Content is currently typed in src/main.tsx as a conservative first-version content layer; it can move to JSON or a CMS adapter later without changing the route structure. Original evidence remains under portfolio-content and is not imported directly at runtime.

@@ -1,0 +1,110 @@
+PROJECT NAME
+MedLink VA
+
+PROJECT CATEGORY
+Healthcare Virtual Assistant, Training and Professional Services Website
+
+PROJECT STATUS
+Implemented website foundation with public pages, Sanity-backed content architecture, lead capture endpoints, certificate generation, certificate verification, SEO configuration, and Cloudflare Pages deployment configuration. Some content remains editable through local fallbacks or Sanity.
+
+DEVELOPMENT PERIOD
+Not specified in the repository documentation.
+
+CLIENT OR BUSINESS CONTEXT
+MedLink VA is a virtual medical assistant business serving healthcare and business-support needs through service information, training programmes, resources, jobs, professional content, and enquiry pathways.
+
+MY ROLE
+Full-Stack Developer and Website Solutions Engineer
+
+PROJECT OVERVIEW
+MedLink VA is a professional website designed to explain virtual medical assistant services, training programmes, resources, employment opportunities, and related products in a clear, conversion-focused experience. The React and TypeScript frontend uses Vite, Tailwind CSS, React Router, and reusable page and component patterns to support a broad set of public routes. Sanity provides structured content for services, classes, jobs, resources, FAQs, team members, testimonials, site settings, videos, and certificate-related records, while local content provides a resilient fallback when CMS content is unavailable. Cloudflare Pages Functions handle newsletter, contact, consultation, and certificate-verification requests. The implementation also includes branded certificate PDF generation, unique certificate numbers, QR verification links, SEO metadata, analytics hooks, accessible form states, and responsive layouts. The portfolio description is limited to repository evidence; visitor counts, conversion rates, financial results, and client claims are not available.
+
+BUSINESS CHALLENGE
+The business needed a credible digital presence that could communicate several related offers without losing a clear route to contact. It also needed structured content areas for ongoing updates, lead-generation forms, training promotion, resource publishing, and a trustworthy way to issue and verify branded certificates.
+
+SOLUTION
+A responsive React website with reusable layouts and page components, Sanity schemas and queries for editable content, Cloudflare Pages Functions for server-side form and verification workflows, and a certificate subsystem spanning data entry, number allocation, PDF generation, QR links, and public lookup.
+
+TARGET AUDIENCE
+Healthcare practices, healthcare teams, organisations seeking administrative support, prospective clients, people interested in virtual medical assistant training, job applicants, learners, and visitors seeking practical resources.
+
+WEBSITE OBJECTIVES
+- Attract healthcare and business-support clients.
+- Communicate services clearly.
+- Promote training programmes.
+- Publish jobs and resources.
+- Collect qualified enquiries and subscriber information.
+- Build trust through testimonials, team information, FAQs, and professional content.
+- Generate branded certificates for completed training programmes.
+
+CORE PAGES
+Home, Services, service detail pages, About, How It Works, healthcare-team audience pages, Jobs, Classes, Resources and resource detail pages, FAQs, Videos, Products, Contact, Book a Consultation, Privacy, Terms, Certificate Verification, and a not-found route.
+
+KEY FEATURES
+Responsive navigation and layout; reusable hero, CTA, card, disclosure, form, and content components; Sanity content loading with local fallback; service, class, job, resource, FAQ, team, testimonial, product, and video presentation; contact, consultation, and newsletter forms; analytics page-view and event hooks; SEO metadata, sitemap, robots configuration, and canonical URL handling; certificate PDF generation with signatures and QR verification; public certificate lookup with validation, rate limiting, and valid/revoked status display.
+
+CONTENT MANAGEMENT
+Sanity Studio schemas and GROQ queries cover site settings, homepage and About content, services, classes, jobs, resources, FAQs, testimonials, team members, product links, video content, certificates, certificate cohorts, and certificate signatories. The frontend uses Sanity when configured and falls back to local content modules when Sanity is unavailable or empty.
+
+LEAD GENERATION
+The browser submits JSON to Cloudflare Pages Function endpoints for newsletter, contact, and consultation flows. Shared validation handles required fields, field lengths, phone normalization, and safe responses. Brevo contact-list and transactional-email calls are performed server-side using environment configuration. Success, validation, configuration, rate-limit, network, and provider-error states are represented in the implementation. No credentials are included in this document.
+
+CERTIFICATE SYSTEM
+Sanity certificate records store recipient, programme, issue date, status, verification token, signatories, and related metadata. Studio actions allocate numbers using the MLVA-program-date-sequence pattern and generate downloadable PDFs. The PDF includes a QR code pointing to the verification route. The public /verify and /verify/:token routes query the certificate-verification Function, which validates input, rate-limits requests, queries Sanity, and displays valid or revoked status. QR verification is implemented, not planned.
+
+TECHNOLOGY STACK
+React, TypeScript, Vite, Tailwind CSS, React Router, Sanity CMS, Cloudflare Pages Functions, Brevo integration, jsPDF, QRCode, libphonenumber-js, Wrangler, and GitHub-based source control configuration.
+
+DEPLOYMENT AND HOSTING
+Cloudflare Pages is configured through wrangler.toml with a Pages build output directory of dist and a compatibility date. The configured site/domain references include medlinkva.com. The live URL is documented as https://medlinkva.com in the repository configuration and content.
+
+SEO AND ACCESSIBILITY
+A reusable SEO component supplies page titles, descriptions, robots directives, canonical URLs, and optional images. The project includes sitemap.xml and robots.txt. Routes use semantic page structures, labels, focus styles, live regions, validation messaging, responsive layouts, and reduced-motion-aware styling where implemented.
+
+SECURITY AND PRIVACY CONSIDERATIONS
+Secrets are intended for environment variables and are not included here. Lead endpoints validate payloads, normalize phone input, avoid returning provider details, and expose generic failure messages. Certificate verification validates identifiers, uses no-store responses and security headers, and rate-limits lookups. The site includes privacy and terms pages. The repository does not establish a general compliance certification claim, and the portfolio does not make one.
+
+MY RESPONSIBILITIES
+Frontend architecture, route and page implementation, reusable UI components, responsive and accessible interaction patterns, Sanity schema/query integration, fallback content behavior, Cloudflare Pages Function workflows, Brevo integration boundary, certificate numbering and PDF generation, certificate verification flow, SEO configuration, asset integration, and deployment configuration.
+
+IMPORTANT TECHNICAL DECISIONS
+- Use Sanity for structured editorial content instead of introducing a custom database or admin application.
+- Keep a local-content fallback so the public site remains usable before CMS population or during temporary CMS unavailability.
+- Keep Brevo credentials and provider calls on the server-side Pages Functions boundary.
+- Use reusable route-level and shared components to keep the multi-section marketing site maintainable.
+- Keep certificate issuance in Sanity Studio while exposing only controlled public verification data.
+- Deploy as a Cloudflare Pages-compatible Vite build with Functions rather than adding a separate Express server.
+
+CHALLENGES SOLVED
+The implementation coordinates multiple content domains in one public information architecture, preserves rendering when Sanity is unavailable, routes lead submissions through server-side validation and provider integration, and connects certificate data entry to PDF output and public verification without exposing private certificate records.
+
+RESULTS AND BUSINESS VALUE
+The verified implementation provides a professional, responsive platform for presenting services and training, publishing editable business content, and issuing verifiable branded certificates. Quantitative business results are not available in the repository and are intentionally not claimed.
+
+PLANNED FUTURE FEATURES
+Customer portal, user login, staff dashboard, online booking, online payments, CRM integration, database-backed customer accounts, and an administrative portal are not represented as completed website functionality unless separately implemented and verified.
+
+PORTFOLIO SUMMARY
+A conversion-focused healthcare services and training website combining a responsive React frontend, Sanity content management, server-side lead capture, SEO foundations, and an integrated certificate issue-and-verify workflow.
+
+SHORT PROJECT DESCRIPTION
+MedLink VA is a React and TypeScript website for a virtual medical assistant business. It presents services, training, jobs, resources, and products; manages structured content through Sanity; captures enquiries through Cloudflare Functions and Brevo; and generates branded certificates with QR-based public verification.
+
+TECHNOLOGIES FOR DISPLAY
+React · TypeScript · Vite · Tailwind CSS · React Router · Sanity CMS · Cloudflare Pages · Cloudflare Pages Functions · Brevo · jsPDF · QRCode
+
+LIVE WEBSITE
+https://medlinkva.com
+
+SOURCE-CODE AVAILABILITY
+Private repository; source code is not publicly available.
+
+SCREENSHOT CAPTIONS
+- approved/medlink-va-cover.png — Approved portfolio cover image for the MedLink VA project.
+- The requested screenshots directory was not present during inspection, so no additional screenshot captions could be generated.
+
+DIAGRAM CAPTIONS
+- 01-medlink-va-system-architecture.svg/png — Verified browser, build, CMS, Functions, external-service, and deployment relationships.
+- 02-medlink-va-content-management-workflow.svg/png — Verified Sanity editorial workflow from Studio entry through published content and React rendering.
+- 03-medlink-va-lead-generation-workflow.svg/png — Verified enquiry and newsletter submission path, validation, server-side provider calls, and user feedback.
+- 04-medlink-va-certificate-workflow.svg/png — Verified certificate data, numbering, PDF/QR generation, and public verification path.

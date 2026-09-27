@@ -1,0 +1,3 @@
+I’m Kenneth Bukenya, a Full-Stack Developer and Business Systems Engineer focused on building secure, integrated digital solutions that improve business operations and decision-making.  
+My work combines software development, database engineering, business-process analysis, automation and data analysis. I develop business applications, ERP systems, websites, APIs, reporting solutions and automated workflows using technologies including React, TypeScript, Node.js, Express, PostgreSQL, SQL and Python.  
+I approach technology from a business perspective: understand the real operational challenge, translate it into clear system rules and build a practical solution that improves accuracy, efficiency, accountability and access to reliable information.

@@ -1,0 +1,29 @@
+HAMA TECHSERVICES BRAND COLOURS
+
+Primary Navy
+HEX: #123B5D
+Use: Headings, navigation, backgrounds and primary branding
+
+Technology Teal
+HEX: #00A6A6
+Use: Buttons, links, highlights, icons and active states
+
+Dark Navy
+HEX: #0B2438
+Use: Footer, dark sections and high-contrast backgrounds
+
+White
+HEX: #FFFFFF
+Use: Main backgrounds and content placed over navy
+
+Light Blue Grey
+HEX: #EAF2F6
+Use: Section backgrounds, cards and subtle visual separation
+
+Primary Text
+HEX: #17212B
+Use: Body copy and headings on light backgrounds
+
+Secondary Text
+HEX: #52606D
+Use: Supporting text, captions and metadata

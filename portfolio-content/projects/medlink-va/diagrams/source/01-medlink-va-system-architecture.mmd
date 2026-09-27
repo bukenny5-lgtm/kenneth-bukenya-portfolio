@@ -1,0 +1,18 @@
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#F7FAFC","primaryTextColor":"#17212B","primaryBorderColor":"#123B5D","lineColor":"#00A6A6","secondaryColor":"#E8F4FA","tertiaryColor":"#E9F7F2","fontFamily":"Arial"}}}%%
+flowchart TD
+  V[Website visitors] --> B[Browser]
+  B --> R[React routes and pages]
+  R --> C[Reusable components]
+  C --> A[Lead and certificate UI]
+  R --> S[SEO metadata and analytics hooks]
+  R --> Q[Sanity content queries]
+  Q --> L[(Sanity Content Lake)]
+  E[Sanity Studio editors] --> L
+  A --> F[Cloudflare Pages Functions]
+  F --> BR[Brevo contacts and email]
+  F --> CV[Certificate verification query]
+  CV --> L
+  R --> AS[Static and optimized assets]
+  BT[Vite build + TypeScript + Tailwind] --> CF[Cloudflare Pages]
+  CF --> B
+  F --> CF

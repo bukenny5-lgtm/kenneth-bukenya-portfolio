@@ -1,0 +1,13 @@
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#F7FAFC","primaryTextColor":"#17212B","primaryBorderColor":"#123B5D","lineColor":"#00A6A6","fontFamily":"Arial"}}}%%
+flowchart TD
+  E[Authorized content editor] --> ST[Sanity Studio]
+  ST --> SC[Content schemas]
+  SC --> VA[Field validation]
+  VA --> PUB[Published documents]
+  PUB --> CL[(Sanity Content Lake)]
+  CL --> GQ[Website GROQ query]
+  GQ --> CP[React content provider]
+  CP --> UI[React components]
+  UI --> WEB[Public website]
+  TYPES[Services · classes · jobs · resources · FAQs · team · testimonials · site settings · videos] -. supported types .-> SC
+  CERT[Certificates · cohorts · signatories] -. supported types .-> SC

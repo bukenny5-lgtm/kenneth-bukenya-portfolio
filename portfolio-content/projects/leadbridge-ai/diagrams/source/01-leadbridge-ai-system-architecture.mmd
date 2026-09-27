@@ -1,0 +1,15 @@
+flowchart TB
+  classDef implemented fill:#E6F4F1,stroke:#00A6A6,color:#17212B,stroke-width:2px
+  classDef evaluated fill:#EAF2F8,stroke:#123B5D,color:#17212B,stroke-width:2px
+  classDef planned fill:#FFF7E6,stroke:#B7791F,color:#17212B,stroke-width:2px,stroke-dasharray: 6 4
+  classDef boundary fill:#FDECEC,stroke:#B42318,color:#17212B,stroke-width:3px
+  classDef output fill:#EAF7EF,stroke:#16805B,color:#17212B,stroke-width:2px
+  M[Lead or customer message]:::evaluated --> N[Channel-normalized input concept]:::evaluated --> BL[Deterministic baseline processing]:::implemented
+  B[Business description]:::implemented --> BL
+  C[Post and conversation context]:::implemented --> BL
+  BL --> IT[Intent classification]:::evaluated --> BO[Buying-opportunity detection]:::evaluated --> PC[Policy and factual controls]:::implemented --> ED[Escalation decision]:::implemented --> HR[Mandatory human-approval boundary]:::boundary --> PR[Proposed response]:::output
+  BL --> EV[Evaluation results]:::output
+  PC --> TR[Sanitized trace outputs]:::output
+  PI[Planned live channel integrations]:::planned -. future .-> N
+  DB[Planned persistent production services]:::planned -. future .-> EV
+  linkStyle default stroke:#123B5D,stroke-width:1.5px

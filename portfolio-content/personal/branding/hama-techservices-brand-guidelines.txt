@@ -1,0 +1,33 @@
+HAMA TECHSERVICES BRAND GUIDELINES
+
+Primary portfolio brand:
+Kenneth Bukenya
+
+Professional identity:
+Full-Stack Developer & Business Systems Engineer
+
+Business and service brand:
+Hama Techservices
+
+Logo usage:
+- Use the horizontal logo in wide layouts.
+- Use the stacked logo in square or narrow layouts.
+- Use the icon alone for favicons and social avatars.
+- Use the dark-background logo in footers and dark sections.
+- Maintain clear space around the logo.
+- Do not stretch, rotate or recolour the logo.
+- Do not place the logo over visually busy photographs.
+
+Brand character:
+Professional, reliable, practical, modern and business-focused.
+
+Typography recommendation:
+- Headings: Manrope or Inter
+- Body text: Inter
+- Technical labels: IBM Plex Mono
+
+Accessibility:
+- Use navy text on white or light backgrounds.
+- Use white text on navy backgrounds.
+- Do not use teal for long paragraphs.
+- Maintain strong contrast for buttons and links.

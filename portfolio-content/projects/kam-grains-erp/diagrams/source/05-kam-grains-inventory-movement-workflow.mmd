@@ -1,0 +1,17 @@
+%% Verified inv movement concepts and route/database effects.
+flowchart TB
+  classDef event fill:#DCEAF4,stroke:#123B5D,color:#17212B
+  classDef balance fill:#E4F2EC,stroke:#16805B,color:#17212B
+  classDef control fill:#FFF3D6,stroke:#B7791F,color:#17212B
+  classDef trace fill:#FBE4E1,stroke:#B42318,color:#17212B
+  PR[Purchase receipt]:::event --> LOT[Product lot creation]:::event --> SOH[Stock on hand]:::balance
+  SOH --> CLEAN[Cleaning / product reclassification]:::event --> LEDGER[Movement ledger]:::balance
+  SOH --> ISR[Internal stock request]:::event --> TRANSFER[Inter-site transfer]:::event --> LEDGER
+  SOH --> DELIVERY[Delivery issue]:::event --> SALE[SALE_ISSUE / lot allocation]:::event --> LEDGER
+  SOH --> QS[Quick Sale issue]:::event --> LEDGER
+  RETURN[Customer return]:::event --> RETURNMOV[Return inventory movement]:::event --> SOH
+  COUNT[Stock count]:::control --> ADJ[Stock adjustment]:::control --> SOH
+  LEDGER --> AUD[Audit log]:::trace
+  LEDGER --> REPORT[Inventory reporting]:::trace
+  CLEAN -. consumes raw stock and produces clean stock .-> LEDGER
+  TRANSFER -. dispatch / receive / variance states .-> LEDGER

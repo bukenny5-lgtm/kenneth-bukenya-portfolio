@@ -1,0 +1,15 @@
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#F7FAFC","primaryTextColor":"#17212B","primaryBorderColor":"#123B5D","lineColor":"#00A6A6","fontFamily":"Arial"}}}%%
+flowchart TD
+  E[Authorized Studio entry] --> DATA[Recipient, programme, date, status]
+  DATA --> SIGN[Trainer and signatory records]
+  DATA --> NUM[Unique MLVA certificate number]
+  NUM --> PDF[Certificate PDF generation]
+  SIGN --> PDF
+  DATA --> TOKEN[Verification token]
+  TOKEN --> QR[QR verification link]
+  PDF --> DL[Downloaded branded PDF]
+  QR --> VERIFY[Public /verify route]
+  VERIFY --> API[Certificate verification Function]
+  API --> LOOKUP[Validated, rate-limited lookup]
+  LOOKUP --> LAKE[(Sanity certificate record)]
+  LAKE --> RESULT[Valid or revoked result]
