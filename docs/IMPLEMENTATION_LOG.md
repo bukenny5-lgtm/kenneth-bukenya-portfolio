@@ -1,3 +1,16 @@
+# Pre-hosting brand and contact correction (2026-09-27)
+- Added the approved dark-background Hama Techservices logo under `public/branding`; the original source remains unchanged.
+- Replaced the footer eyebrow treatment with a readable secondary-brand block and Skills CTA.
+- Rebuilt Contact rows as full anchors with icons, destinations, accessible external labels and a portfolio enquiry email subject.
+- Added hover, focus, active, reduced-motion and responsive handling for the contact interactions.
+
+# Focused content and evidence corrections (2026-09-27)
+- Replaced defensive project introductions with natural problem-to-solution language for all four projects.
+- Added project-specific My role descriptions and contextual media headings; removed visitor-facing evidence-report wording from rendered roles and captions.
+- Preserved excluded screenshots, notebooks, PowerPoint reports, private CMS records and sensitive analytics media.
+- Expanded the reusable lightbox with fit, 100%, 150%, 200%, zoom in/out, reset, SVG-original and download controls, while retaining keyboard navigation, focus trapping and scroll locking.
+- Added linked Availability and Hama Techservices cards, distinct capability-card interactions, credential PDF indicators and route-aware footer navigation.
+
 # Stage 3 UI refinement (2026-09-27)
 - Copied the approved JPEG profile portrait to `public/assets/kenneth-bukenya-profile.jpg` without changing the original source.
 - Added the portrait to the homepage hero with the required descriptive alt text and restrained crop treatment.

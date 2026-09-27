@@ -18,3 +18,8 @@
 - Keep `Projects` as the single public navigation label and treat `/work` and `/projects/:slug` as part of the same active navigation state.
 - Prefer CSS-only visual refinement over adding a UI framework or animation library.
 - Omit a marquee because it would not improve the page's clarity or accessibility.
+
+# Focused content decisions
+- Use contextual evidence headings instead of a generic screenshot-gallery label: architecture/workflows for KAM, website views/diagrams for MedLink, architecture/evaluation for LeadBridgeAI and analysis/workflow evidence when analytics media is available.
+- Keep the analytics case study text-first because its available screenshots contain identifiable customer names or transaction values.
+- Present zoom and original/download controls in the shared viewer so large diagrams remain useful without publishing additional source files.

@@ -43,6 +43,8 @@ export interface Project {
   category: ProjectCategory
   status: ProjectStatus
   summary: string
+  role?: string
+  mediaHeading?: string
   cover: string
   technologies: TechnologyTag[]
   sections: ProjectSection[]

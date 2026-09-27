@@ -9,3 +9,10 @@ Brand colours follow the supplied Hama Techservices guidance: navy #123B5D, dark
 - Interaction: 150–350ms restrained transitions, visible amber focus rings, active navigation uses `aria-current` plus an underline, and hover styles have keyboard-focus equivalents.
 - Motion: reduced-motion users receive immediate interactions; gallery opening/closing does not rely on animation.
 - Responsive behavior: hero and approach content stack below 850px, controls become full-width below 520px, and gallery/case-study grids collapse without horizontal overflow.
+- Evidence viewer: the lightbox uses approximately 94vw by 92vh on desktop, a contained scrollable stage for zoomed diagrams, large touch controls on mobile and compact controls for fit, zoom, reset, original SVG and download actions.
+
+## Footer and contact interaction rules
+
+- The Hama Techservices logo is a readable secondary brand treatment in the footer; the Kenneth Bukenya identity remains primary.
+- Contact destinations are full-row anchors with a 44px minimum interaction target, icon, destination/supporting copy and directional affordance. Email uses a portfolio enquiry subject; LinkedIn and GitHub open in a new tab with `noopener noreferrer`.
+- Contact hover and focus states use a teal border, subtle background, restrained lift/shadow, icon treatment and 3–4px arrow movement. Reduced-motion users receive no movement.

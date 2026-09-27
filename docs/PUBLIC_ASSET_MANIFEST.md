@@ -2,12 +2,16 @@
 
 This manifest records assets intentionally available under `public/`. Original source files under `portfolio-content` were preserved unchanged.
 
+The excluded screenshot decisions remain in force: no KAM operational screenshots, analytics screenshots with customer names or transaction values, private CMS screenshots, notebooks or PowerPoint reports are public assets.
+
 | Original portfolio-content path | Public asset path | Type / project | Placement | Privacy classification | Included / excluded | Alt text or caption |
 |---|---|---|---|---|---|---|
 | `projects/kam-grains-erp/approved/kam-grains-erp-cover.png` | `assets/kam-grains-erp-cover.png` | Cover / KAM GRAINS ERP | Project cards and hero | Approved public-safe cover | Included | Approved KAM GRAINS ERP cover |
 | `projects/medlink-va/approved/medlink-va-cover.png` | `assets/medlink-va-cover.png` | Cover / MedLink VA | Project cards and hero | Approved public-safe cover | Included | Approved MedLink VA cover |
 | `projects/leadbridge-ai/approved/leadbridge-ai-cover.png` | `assets/leadbridge-ai-cover.png` | Cover / LeadBridgeAI | Project cards and hero | Approved synthetic-project cover | Included | Approved LeadBridgeAI cover |
 | `projects/data-analytics-ml-automation/approved/erp-data-analytics-ml-cover.png` | `assets/erp-data-analytics-ml-cover.png` | Cover / Analytics umbrella | Project cards and hero | Approved public-safe cover | Included | Approved analytics and automation cover |
+| `personal/profile-photo/kenneth-bukenya-profile-original.jpg.jpeg` | `assets/kenneth-bukenya-profile.jpg` | JPEG portrait / Personal | Homepage hero | Approved profile image | Included | Kenneth Bukenya, Full-Stack Developer and Business Systems Engineer |
+| `personal/branding/hama-techservices-logo-dark-background.png` | `branding/hama-techservices-logo-dark-background.png` | PNG logo / Hama Techservices | Footer brand block | Approved dark-background logo | Included | Hama Techservices |
 | `projects/kam-grains-erp/diagrams/exported/01-kam-grains-system-architecture.svg` | `assets/diagrams/kam-architecture.svg` | SVG diagram / KAM | Case-study gallery | Public-safe architecture | Included | KAM GRAINS ERP browser, API, database and reporting architecture |
 | `projects/kam-grains-erp/diagrams/exported/03-kam-grains-procure-to-pay-workflow.svg` | `assets/diagrams/kam-procure-to-pay.svg` | SVG diagram / KAM | Case-study gallery | Public-safe workflow | Included | KAM GRAINS ERP procure-to-pay workflow |
 | `projects/kam-grains-erp/diagrams/exported/04-kam-grains-order-to-cash-workflow.svg` | `assets/diagrams/kam-order-to-cash.svg` | SVG diagram / KAM | Case-study gallery | Public-safe workflow | Included | KAM GRAINS ERP order-to-cash workflow |

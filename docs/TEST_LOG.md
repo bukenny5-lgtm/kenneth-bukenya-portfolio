@@ -1,3 +1,20 @@
+# Pre-hosting interface correction validation (2026-09-27)
+- `npm.cmd run lint`: PASS.
+- `npm.cmd run build`: PASS.
+- `git diff --check`: PASS; only normal Git line-ending warnings were emitted.
+- Local smoke requests returned HTTP 200 for `/`, `/about`, `/skills`, `/contact`, `/projects`, `/invalid-route`, the Hama logo and the CV asset.
+- Source checks confirmed full-row email, LinkedIn and GitHub anchors, new-tab security attributes, footer navigation active-state wiring, no nested interactive elements in the new contact rows, and no `portfolio-content` edits.
+- Browser visual/runtime-console acceptance remains pending; deployment was not performed.
+
+# Focused correction validation (2026-09-27)
+- `npm.cmd run lint`: PASS.
+- `npm.cmd run build`: PASS.
+- `git diff --check`: PASS; only normal Git line-ending warnings were emitted.
+- Smoke-tested homepage, Projects, Skills, Credentials, Contact, all four case-study routes, invalid route, profile image, all displayed diagrams, MedLink screenshots, CV and certificate paths through the local server: HTTP 200.
+- Source checks confirmed contextual media headings, no empty analytics gallery, no raw notebook/PowerPoint links, project-specific roles, active footer navigation, CTA-card links and lightbox zoom/original/download controls.
+- Excluded screenshots remain excluded by user decision.
+- Browser visual and interactive manual acceptance remains pending.
+
 # Stage 3 validation (2026-09-27)
 - `npm.cmd run lint`: PASS.
 - `npm.cmd run build`: PASS.
